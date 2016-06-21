@@ -11,8 +11,8 @@
     <build>
         <resources>
             <resource>
-                <directory>src/main/resources/org/languagetool/resource/ga/</directory>
-                <filtering>false</filtering>
+                <directory>src/main/resources/</directory>
+                <filtering>true</filtering>
             </resource>
         </resources>
     </build>
