@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.languagetool</groupId>
+  <artifactId>languagetool-ga-dicts</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20161107175943</lastUpdated>
+  </versioning>
+</metadata>
