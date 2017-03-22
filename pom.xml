@@ -9,8 +9,8 @@
     <version>0.01</version>
     <packaging>jar</packaging>
 
-    <name>LanguageTool Irish dictionaries</name>
-    <description>Dictionary resources for use with LanguageTool</description>
+    <name>Irish Part of Speech Dictionary</name>
+    <description>Irish part of speech dictionary as a Morfologik binary</description>
     <url>https://github.com/jimregan/languagetool-ga-dicts</url>
 
     <licenses>
@@ -33,4 +33,19 @@
     <scm>
         <url>https://github.com/jimregan/languagetool-ga-dicts.git</url>
     </scm>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources/org/languagetool/resource/ga</directory>
+                <excludes>
+                    <exclude>**/*.pl</exclude>
+                    <exclude>**/*.sh</exclude>
+                    <exclude>**/*.dic</exclude>
+                    <exclude>**/*.aff</exclude>
+                    <exclude>**/*.tsv</exclude>
+                </excludes>
+            </resource>
+        </resources>
+    </build>
 </project>
