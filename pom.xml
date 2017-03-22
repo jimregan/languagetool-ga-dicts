@@ -33,19 +33,4 @@
     <scm>
         <url>https://github.com/jimregan/languagetool-ga-dicts.git</url>
     </scm>
-
-    <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources/org/languagetool/resource/ga</directory>
-                <excludes>
-                    <exclude>**/*.pl</exclude>
-                    <exclude>**/*.sh</exclude>
-                    <exclude>**/*.dic</exclude>
-                    <exclude>**/*.aff</exclude>
-                    <exclude>**/*.tsv</exclude>
-                </excludes>
-            </resource>
-        </resources>
-    </build>
 </project>
