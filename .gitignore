@@ -1,0 +1,4 @@
+target/
+*.aff
+*.tsv
+*.dic
