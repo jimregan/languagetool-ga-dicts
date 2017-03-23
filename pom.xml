@@ -31,7 +31,10 @@
     </developers>
 
     <scm>
-        <url>https://github.com/jimregan/languagetool-ga-dicts.git</url>
+        <url>https://github.com/jimregan/languagetool-ga-dicts</url>
+        <connection>scm:git:git@github.com:jimregan/languagetool-ga-dicts.git</connection>
+        <developerConnection>scm:git:git@github.com:jimregan/languagetool-ga-dicts.git</developerConnection>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
@@ -55,7 +58,7 @@
                 <configuration>
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
         </plugins>
@@ -68,16 +71,9 @@
 
     <profiles>
         <profile>
-            <id>release-sign-artifacts</id>
-            <activation>
-                <property>
-                     <name>performRelease</name>
-                     <value>true</value>
-                </property>
-            </activation>
+            <id>release</id>
             <build>
                 <plugins>
-<!--
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
@@ -88,14 +84,13 @@
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
-                                <phase>install</phase>
+                                <phase>verify</phase>
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
                             </execution>
                         </executions>
                     </plugin>
--->
                 </plugins>
             </build>
         </profile>
