@@ -8,7 +8,7 @@ echo ""
 LANG_CODE=ga
 COUNTRY_CODE=IE
 REPO=/home/jim/.m2/repository
-LT_VERSION=3.7-SNAPSHOT
+LT_VERSION=4.3-SNAPSHOT
 # get frequency data from https://github.com/mozilla-b2g/gaia/tree/master/apps/keyboard/js/imes/latin/dictionaries -
 # this is optional, remove "-freq $FREQ_FILE" below for not using frequencies:
 FREQ_FILE=dict/ga_wordlist.xml
@@ -18,7 +18,7 @@ TEMP_FILE=/tmp/lt-dictionary.dump
 OUTPUT_FILE=/tmp/out.dict
 BASE=/home/jim/Playing
 
-LTTOOLPATH=$BASE/languagetool/languagetool-tools/target/languagetool-tools-3.7-SNAPSHOT-jar-with-dependencies.jar
+LTTOOLPATH=$BASE/languagetool/languagetool-tools/target/languagetool-tools-$LT_VERSION-jar-with-dependencies.jar
 CPATH=$REPO/com/carrotsearch/hppc/0.7.1/hppc-0.7.1.jar:$REPO/com/beust/jcommander/1.48/jcommander-1.48.jar:$REPO/org/carrot2/morfologik-fsa-builders/2.1.2/morfologik-fsa-builders-2.1.2.jar:$REPO/org/carrot2/morfologik-stemming/2.1.2/morfologik-stemming-2.1.2.jar:$REPO/org/carrot2/morfologik-fsa/2.1.2/morfologik-fsa-2.1.2.jar:$REPO/org/carrot2/morfologik-tools/2.1.2/morfologik-tools-2.1.2.jar:$REPO/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:languagetool-tools/target/languagetool-tools-${LT_VERSION}.jar:${LTTOOLPATH}
 PREFIX=${LANG_CODE}_${COUNTRY_CODE}
 TOKENIZER_LANG=${LANG_CODE}-${COUNTRY_CODE}
