@@ -37,7 +37,7 @@ cat pairs.tsv | perl tsv2tsv.pl > $TEMP_FILE
 java -cp $CPATH:languagetool-standalone/target/LanguageTool-*/LanguageTool-*/languagetool.jar \
   org.languagetool.tools.POSDictionaryBuilder -i $TEMP_FILE -info $INFO_FILE -o $DICFILE
 
-java -cp $CPATH:languagetool-standalone/target/LanguageTool-*/LanguageTool-*/languagetool.jar \
+java -Xmx4g -cp $CPATH:languagetool-standalone/target/LanguageTool-*/LanguageTool-*/languagetool.jar \
   org.languagetool.tools.SynthDictionaryBuilder -i $TEMP_FILE -info $INFOSYN_FILE -o $DICSYNFILE
 
 rm $TEMP_FILE
