@@ -28,7 +28,7 @@ while(<>) {
 			# filter
 			next if ($tags eq 'XMLTag' || $tags eq 'Event' || $tags eq 'Num:Op');
 			if ($tags eq '' || $surface eq '' || $lemma eq '') {
-				print "Error in line: $_\n";
+				print STDERR "Error in line: $_\n";
 				next;
 			}
 			print "$surface\t$lemma\t$tags\n";
