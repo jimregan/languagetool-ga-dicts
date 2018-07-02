@@ -32,7 +32,7 @@ DICFILE=${DIC_NO_SUFFIX}.dict
 DICSYN_NO_SUFFIX=$CONTENT_DIR/$PREFIXSYN
 DICSYNFILE=${DICSYN_NO_SUFFIX}.dict
 
-cat pairs.tsv | sort | perl tsv2tsv.pl > $TEMP_FILE
+cat pairs.tsv | perl tsv2tsv.pl | awk -F'\t' '{print $2 "+" $1 "+" $3}'|sort|awk -F'+' '{print $2 "\t" $1 "\t" $3}' > $TEMP_FILE
 
 java -cp $CPATH:languagetool-standalone/target/LanguageTool-*/LanguageTool-*/languagetool.jar \
   org.languagetool.tools.POSDictionaryBuilder -i $TEMP_FILE -info $INFO_FILE -o $DICFILE
@@ -40,4 +40,4 @@ java -cp $CPATH:languagetool-standalone/target/LanguageTool-*/LanguageTool-*/lan
 java -Xmx4g -cp $CPATH:languagetool-standalone/target/LanguageTool-*/LanguageTool-*/languagetool.jar \
   org.languagetool.tools.SynthDictionaryBuilder -i $TEMP_FILE -info $INFOSYN_FILE -o $DICSYNFILE
 
-rm $TEMP_FILE
+#rm $TEMP_FILE
