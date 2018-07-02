@@ -32,7 +32,7 @@ DICFILE=${DIC_NO_SUFFIX}.dict
 DICSYN_NO_SUFFIX=$CONTENT_DIR/$PREFIXSYN
 DICSYNFILE=${DICSYN_NO_SUFFIX}.dict
 
-cat pairs.tsv | perl tsv2tsv.pl | sort > $TEMP_FILE
+cat pairs.tsv | sort | perl tsv2tsv.pl > $TEMP_FILE
 
 java -cp $CPATH:languagetool-standalone/target/LanguageTool-*/LanguageTool-*/languagetool.jar \
   org.languagetool.tools.POSDictionaryBuilder -i $TEMP_FILE -info $INFO_FILE -o $DICFILE
