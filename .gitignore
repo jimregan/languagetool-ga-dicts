@@ -2,3 +2,4 @@ target/
 *.aff
 *.tsv
 *.dic
+*.txt_tags.txt
