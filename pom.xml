@@ -6,7 +6,7 @@
 
     <groupId>io.github.jimregan</groupId>
     <artifactId>languagetool-ga-dicts</artifactId>
-    <version>0.02</version>
+    <version>0.03</version>
     <packaging>jar</packaging>
 
     <name>Irish Part of Speech Dictionary</name>
